@@ -23,6 +23,9 @@ class Setting:
         try:
             return self.settings[self.keys[1]][key]
         except KeyError:
+            if key == 'mugshot':
+                return '/static/img/mugshot.png'
+
             return '%s: Not Defined' % key
 
     def check_settings_file(self):

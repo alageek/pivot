@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{{ handler.settings['candidate']('fullname') }}</title>
+        <title>{{ handler.settings['candidate']('fullname') }} - Curriculum Vitae</title>
         <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection" />
         <!--[if lt IE 8]>
             <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection" />
@@ -12,17 +12,35 @@
     </head>
 
     <body>
+        <a class="github" href="https://github.com/alageek/pivot" target="_blank">
+            <img src="/static/img/github.png" />
+        </a>
+
         <div class="container" id="container">
             <div class="span-22 append-1 prepend-1 append-bottom prepend-top last">
-                <div class="span-24 last">
-                    <div id="header">
-                        <h1>
-                            <a href="/">{{ handler.settings['candidate']('fullname') }}</a>
-                        </h1>
+                <div class="span-22 last">
+                    <div class="prepend-top" id="header">
+                        <div class="span-15">
+                            <h1>{{ handler.settings['candidate']('fullname') }}</h1>
+                            <div id="contact">
+                                <p><strong>Email:</strong> {{ handler.settings['candidate']('email') }}</p>
+                                <p><strong>Phone:</strong> {{ handler.settings['candidate']('phone') }}</p>
+                            </div>
+                            <div class="prepend-top" id="about-me">
+                                <h2>About Me</h2>
+                                <p>{{ handler.settings['candidate']('about_me') }}</p>
+                            </div>
+                        </div>
+                        <div class="span-7 last">
+                            <div id="mugshot">
+                                <img src="{{ handler.settings['candidate']('mugshot') }}" width="250" height="250" />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="span-24 last">
+                <div class="span-22 last prepend-top">
+                    <hr />
                     <div id="content">
                         {% block content %}{% end %}
                     </div>
