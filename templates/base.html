@@ -13,7 +13,7 @@
 
     <body>
         <a class="github" href="https://github.com/alageek/pivot" target="_blank">
-            <img src="/static/img/github.png" />
+            <img src="/static/img/github.png" alt="fork me on github" />
         </a>
 
         <div class="container" id="container">
@@ -33,7 +33,8 @@
                         </div>
                         <div class="span-7 last">
                             <div id="mugshot">
-                                <img src="{{ handler.settings['candidate']('mugshot') }}" width="250" height="250" />
+                                <img src="{{ handler.settings['candidate']('mugshot') }}" width="250" height="250"
+                                     alt="{{ handler.settings['candidate']('fullname') }}"/>
                             </div>
                         </div>
                     </div>
