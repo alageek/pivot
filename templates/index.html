@@ -50,14 +50,13 @@
     </div>
     <div class="span-22 last section">
         <div class="span-8">
-            <h1>Training</h1>
+            <h1>Other</h1>
         </div>
         <div class="span-14 last">
             <ul>
-                {% for object in candidate('training') %}
+                {% for object in candidate('other') %}
                     <li>
-                        <h2>{{ object['title'] }}</h2>
-                        <h3>{{ object['summary'] }}</h3>
+                        <h3>{{ object['title'] }}</h3>
                         <p>{{ object['description'] }}</p>
                     </li>
                 {% end %}

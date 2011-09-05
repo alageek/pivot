@@ -17,7 +17,7 @@ class Setting:
                 'experience',
                 'expertise',
                 'education',
-                'training'
+                'other'
             ]
         }
         self.keys = self.setting_values.keys()
