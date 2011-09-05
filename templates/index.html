@@ -1,5 +1,68 @@
 {% extends "base.html" %}
 
 {% block content %}
-   heello.
+    <div class="span-22 last section">
+        <div class="span-8">
+            <h1>Experience</h1>
+        </div>
+        <div class="span-14 last">
+            <ul>
+                {% for object in candidate('experience') %}
+                    <li>
+                        <h2>{{ object['title'] }}</h2>
+                        <h3>{{ object['summary'] }}</h3>
+                        <p>{{ object['description'] }}</p>
+                    </li>
+                {% end %}
+            </ul>
+        </div>
+    </div>
+    <div class="span-22 last section">
+        <div class="span-8">
+            <h1>Expertise</h1>
+        </div>
+        <div class="span-14 last">
+            <ul>
+                {% for object in candidate('expertise') %}
+                    <li>
+                        <h2>{{ object['title'] }}</h2>
+                        <h3>{{ object['summary'] }}</h3>
+                        <p>{{ object['description'] }}</p>
+                    </li>
+                {% end %}
+            </ul>
+        </div>
+    </div>
+    <div class="span-22 last section">
+        <div class="span-8">
+            <h1>Education</h1>
+        </div>
+        <div class="span-14 last">
+            <ul>
+                {% for object in candidate('education') %}
+                    <li>
+                        <h2>{{ object['title'] }}</h2>
+                        <h3>{{ object['summary'] }}</h3>
+                        <p>{{ object['description'] }}</p>
+                    </li>
+                {% end %}
+            </ul>
+        </div>
+    </div>
+    <div class="span-22 last section">
+        <div class="span-8">
+            <h1>Training</h1>
+        </div>
+        <div class="span-14 last">
+            <ul>
+                {% for object in candidate('training') %}
+                    <li>
+                        <h2>{{ object['title'] }}</h2>
+                        <h3>{{ object['summary'] }}</h3>
+                        <p>{{ object['description'] }}</p>
+                    </li>
+                {% end %}
+            </ul>
+        </div>
+    </div>
 {% end %}

@@ -1,5 +1,6 @@
 import tornado
 import tornado.web
+from settings import Setting
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -22,3 +23,16 @@ class BaseHandler(tornado.web.RequestHandler):
 class IndexHandler(BaseHandler):
 
     template_name = 'index'
+
+    def __init__(self, *args, **kwargs):
+        self.pivot = Setting()
+
+        super(IndexHandler, self).__init__(*args, **kwargs)
+
+    def get_context_data(self, *args):
+        context_data = super(IndexHandler, self).get_context_data(*args)
+        context_data.update({
+            'candidate': self.pivot.candidate
+        })
+
+        return context_data

@@ -13,3 +13,23 @@ Candidate:
     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
     wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
     lobortis nisl ut aliquip ex ea commodo consequat.
+  experience:
+    # Example
+    - title: Lorem ipsum dolor sit amet
+      summary: consectetur adipiscing elit. Proin a nibh mauris
+      description:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a nibh
+        mauris. Mauris interdum, dolor in vulputate tincidunt, mauris lorem
+        feugiat
+  expertise:
+    - title: _
+      summary: _
+      description: _
+  education:
+    - title: _
+      summary: _
+      description: _
+  training:
+    - title: _
+      summary: _
+      description: _
