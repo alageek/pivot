@@ -7,7 +7,7 @@ Candidate:
   fullname: _
   email: _
   phone: _
-  mugshot: _
+  #mugshot: _
   about_me:
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
     nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
@@ -28,7 +28,6 @@ Candidate:
   education:
     - title: _
       summary: _
-      description: _
   training:
     - title: _
       summary: _
