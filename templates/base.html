@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ handler.settings['candidate']('fullname') }}</title>
+        <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+        <!--[if lt IE 8]>
+            <link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection" />
+        <![endif]-->
+        <link rel="stylesheet/less" type="text/css" href="/static/less/styles.less">
+        <script src="/static/js/outsource/less.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="span-22 append-1 prepend-1 append-bottom prepend-top last">
+                <div class="span-24 last">
+                    <div id="header">
+                        <h1>
+                            <a href="/">{{ handler.settings['candidate']('fullname') }}</a>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="span-24 last">
+                    <div id="content">
+                        {% block content %}{% end %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
